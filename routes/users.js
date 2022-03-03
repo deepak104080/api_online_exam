@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+var colors = require('colors');
 
 router.get('/', (req, res) => {
     res.send('Users List - GET Call');
@@ -21,9 +22,9 @@ router.delete('/', (req, res) => {
 //     res.send('Users List - GET Call - All Users');
 // })
 
-router.get('/all/:id', (req, res) => {
-    console.log(req.params.id);
-    res.send('Users List - GET Call - All Users - ', req.params.id);
+router.get('/allusers/:id', (req, res) => {
+    console.log(colors.red(req.params.id));
+    res.send('Users List - GET Call - All Users - ');
 })
 
 module.exports = router;

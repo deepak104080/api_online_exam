@@ -27,4 +27,14 @@ router.get('/allusers/:id', (req, res) => {
     res.send('Users List - GET Call - All Users - ');
 })
 
+router.get('/allusers', (req, res) => {
+    console.log(colors.red(req.query));
+    res.send('Users List - GET Call - All Users - ');
+})
+
 module.exports = router;
+
+// localhost:4000/users - GET
+// localhost:4000/users - POST
+// localhost:4000/users - PUT
+// localhost:4000/users - DELETE

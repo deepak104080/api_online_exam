@@ -39,3 +39,20 @@ Middleware
 Routing
 Templating
 Debugging
+
+
+ExpressJS - Templateing
+PUG
+EJS
+HAML
+hbs
+express-hbs
+eta
+marko
+
+
+how to send html - website
+how to send json - api
+
+
+Express - MVC Architecture - model - view - controller

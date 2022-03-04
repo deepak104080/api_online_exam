@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <%- include('common/header')  %>
+        <h1>
+            My name is -   <%=  user.name    %>
+        </h1>
+        <h1>
+            My city is -   <%=  user.city    %>
+        </h1>
+        <p>My skills are - </p>
+        <ul>
+            <%  user.skills.forEach((item) => {  %>
+
+                <li>  <%= item   %></li>
+
+
+
+                <%  })    %>
+            
+        </ul>
+        <%     if(user.adult) {     %>
+
+            <p>I am an adult.</p>
+
+        <%    }    %>
+        <%- include('common/footer')  %>
+    </body>
+</html>

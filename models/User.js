@@ -1,7 +1,7 @@
 // Mongoose - Library - ORM - ExpressJS
 
 const mongoose = require('mongoose');
-
+const uniqueValidator = require('mongoose-unique-validator');
 
 const UserSchema = mongoose.Schema({
     userid: {
@@ -54,5 +54,6 @@ const UserSchema = mongoose.Schema({
     // }
 },{strict: true});
 
+UserSchema.plugin(uniqueValidator);
 
 module.exports = mongoose.model('User', UserSchema);

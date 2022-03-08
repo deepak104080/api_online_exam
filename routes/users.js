@@ -2,12 +2,14 @@ const express = require('express');
 const router = express.Router();
 var colors = require('colors');
 
-router.get('/', (req, res) => {
-    res.send('Users List - GET Call');
-})
+
 
 router.post('/', (req, res) => {
     res.send('Users List - POST Call');
+})
+
+router.get('/', (req, res) => {
+    res.send('Users List - GET Call');
 })
 
 router.put('/', (req, res) => {

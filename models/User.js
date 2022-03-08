@@ -23,35 +23,35 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true,
         unique: true
-    },
-    password: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    contact: {
-        type: Number,
-        required: true
-    },
-    city: {
-        type: String
-    },
-    pincode: {
-        type: Number
-    },
-    address: {
-        type: String
-    },
-    gender: {
-        type: String
-    },
-    dob: {
-        type: Date
-    },
-    created: {
-        type: Date,
-        required: true
     }
+    // password: {
+    //     type: String,
+    //     required: true,
+    //     unique: true
+    // },
+    // contact: {
+    //     type: Number,
+    //     required: true
+    // },
+    // city: {
+    //     type: String
+    // },
+    // pincode: {
+    //     type: Number
+    // },
+    // address: {
+    //     type: String
+    // },
+    // gender: {
+    //     type: String
+    // },
+    // dob: {
+    //     type: Date
+    // },
+    // created: {
+    //     type: Date,
+    //     required: true
+    // }
 },{strict: true});
 
 

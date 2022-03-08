@@ -4,6 +4,7 @@ const app = express();
 // app.use(bodyParser.json());
 const PORT = 4000;
 var colors = require('colors');
+const { default: mongoose } = require('mongoose');
 
 const reqFilter = require('./middleware/middleware_age');
 // app.use(reqFilter);
@@ -83,6 +84,12 @@ app.get('/profile', (req, res) => {
 app.get('*',(req, res) => {
     res.sendFile(`${publicPath}/notfound.html`);
 })
+
+
+mongoose.connect('mongodb+srv://testuser001:test@test@cluster0.2eq41.mongodb.net/online_exam?retryWrites=true&w=majority', {userUnifiedTology: true}, ()=>{
+    console.log('Mongoose DB connected...')
+})
+
 
 //Start Express Server
 app.listen(4000);

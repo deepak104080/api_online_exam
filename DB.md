@@ -46,3 +46,13 @@ userid  name    email       password
         password: 123
     }
 ]
+
+---------------------------------------------------------
+SQL - Structured Query Language
+
+DDL - Data Definition Language - Create, Drop, Alter
+DML - Data Manipulation Language - Insert, Delete, Update, Select
+DCL - Data Control Language - Grant, Revoke
+
+
+MySQL Workbench, phpMyAdmin - MS SQL, MySQL, PostgresSQL, Oracle

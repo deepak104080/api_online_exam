@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-// const bodyParser = require('body-parser');
-// app.use(bodyParser.json());
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 const PORT = 4000;
 var colors = require('colors');
 const { default: mongoose } = require('mongoose');
@@ -86,7 +86,7 @@ app.get('*',(req, res) => {
 })
 
 
-mongoose.connect('mongodb+srv://testuser001:test@test@cluster0.2eq41.mongodb.net/online_exam?retryWrites=true&w=majority', {userUnifiedTology: true}, ()=>{
+mongoose.connect('mongodb+srv://testuser001:z9xsFuktzYAs4fMk@cluster0.2eq41.mongodb.net/online_exam?retryWrites=true&w=majority', {useNewUrlParser: true}, {userUnifiedTology: true}, ()=>{
     console.log('Mongoose DB connected...')
 })
 

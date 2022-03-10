@@ -28,6 +28,9 @@ app.set('view engine', 'ejs');
 const usersRoute = require('./routes/users');
 app.use('/users', usersRoute);
 
+const qsRoute = require('./routes/qs');
+app.use('/questions', qsRoute);
+
 //Other static routes
 app.get('/home', reqFilter, (req, res) => {
     res.send('My Home Pagge...');

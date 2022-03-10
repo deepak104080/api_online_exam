@@ -25,7 +25,12 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try{
+
+        // if(userlist is in memcache/radis)
+        // return frm memchache
+        // else
         const userslist = await User.find();
+        //save userlist to memcache for 10 min
         res.status(201).json(userslist);
     }
     catch(err){
@@ -101,3 +106,5 @@ module.exports = router;
 // localhost:4000/users - POST
 // localhost:4000/users - PUT
 // localhost:4000/users - DELETE
+
+

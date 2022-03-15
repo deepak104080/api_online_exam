@@ -15,6 +15,8 @@ router.post('/', async (req, res) => {
         })
         const newUserStatus = await user.save();
         //console.log(newUserStatus);
+        res.header('Access-Control-Allow-Headers', '*');
+        res.header('Access-Control-Allow-Origin', '*');
         res.status(201).json(newUserStatus);
     }
     catch(err) {

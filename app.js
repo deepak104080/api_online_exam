@@ -5,9 +5,18 @@ app.use(bodyParser.json());
 const PORT = 4000;
 var colors = require('colors');
 const { default: mongoose } = require('mongoose');
+const cors = require('cors');
 
 const reqFilter = require('./middleware/middleware_age');
 // app.use(reqFilter);
+
+const reqFilter2 = (req, res, next) => {
+    console.log('Inside back End...', req.body);
+    next();
+}
+
+app.use(reqFilter2);
+app.use(cors());
 
 // localhost:4000 - GET
 app.get('/',(req, res) => {

@@ -4,7 +4,7 @@ const router = express.Router();
 const colors = require('colors');
 const User = require('../models/User');
 const { create } = require('../models/User');
-const db = require('../db');
+// const db = require('../db');
 
 router.post('/', async (req, res) => {
   try {

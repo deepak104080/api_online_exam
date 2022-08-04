@@ -103,4 +103,4 @@ mongoose.connect('mongodb+srv://testuser001:z9xsFuktzYAs4fMk@cluster0.2eq41.mong
 })
 
 // Start Express Server
-app.listen(4000);
+app.listen(process.env.PORT || 4000);

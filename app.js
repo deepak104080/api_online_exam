@@ -98,9 +98,9 @@ app.get('*', (req, res) => {
   res.sendFile(`${publicPath}/notfound.html`);
 });
 
-// mongoose.connect('mongodb+srv://testuser001:z9xsFuktzYAs4fMk@cluster0.2eq41.mongodb.net/online_exam?retryWrites=true&w=majority', {useNewUrlParser: true}, {userUnifiedTology: true}, ()=>{
-//     console.log('Mongoose DB connected...')
-// })
+mongoose.connect('mongodb+srv://testuser001:z9xsFuktzYAs4fMk@cluster0.2eq41.mongodb.net/online_exam?retryWrites=true&w=majority', {useNewUrlParser: true}, {userUnifiedTology: true}, ()=>{
+    console.log('Mongoose DB connected...')
+})
 
 // Start Express Server
 app.listen(4000);
